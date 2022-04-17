@@ -9,9 +9,9 @@ Console.WriteLine($"Дано число {n}.");
 Console.WriteLine($"Число в перевернутом виде: {NumberReverse(n)}.");
 
 
-string NumberReverse(int number, string reversedNumber = "")
+int NumberReverse(int number, int reversedNumber = 0)
 {
     if (number == 0) return reversedNumber;
-    reversedNumber += number % 10;
+    reversedNumber = reversedNumber * 10 + number % 10;
     return NumberReverse(number / 10, reversedNumber);
 }
